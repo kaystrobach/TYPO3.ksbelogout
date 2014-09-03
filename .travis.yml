@@ -28,6 +28,7 @@ before_script:
   - composer require --no-update "typo3-ci/typo3cms:dev-master" "typo3-ci/typo3sniffpool:dev-master"
   - composer install
   - mkdir -p uploads typo3temp typo3conf/ext
+  - mv TYPO3.$EXTENSIONKEY $EXTENSIONKEY
   - mv $EXTENSIONKEY typo3conf/ext/
 
 script:
