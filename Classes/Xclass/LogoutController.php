@@ -18,7 +18,11 @@ class LogoutController extends \TYPO3\CMS\Backend\Controller\LogoutController {
 	public function logout() {
 		// Logout written to log
 		$GLOBALS['BE_USER']->writelog(
-			255,2,0,1,'User %s logged out from TYPO3 Backend',
+			255,
+			2,
+			0,
+			1,
+			'User %s logged out from TYPO3 Backend',
 			array(
 				$GLOBALS['BE_USER']->user['username']
 			)
